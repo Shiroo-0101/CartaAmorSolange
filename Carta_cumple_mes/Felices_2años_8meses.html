@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz 2 años y 8 meses ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #ffdde1, #ee9ca7, #b83280);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+      text-align: center;
+      position: relative;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 650px;
+      background: rgba(255, 255, 255, 0.95);
+      color: #5c1238;
+      border-radius: 30px;
+      padding: 35px 25px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      position: relative;
+      z-index: 2;
+      animation: aparecer 1.5s ease;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .big-heart {
+      font-size: 70px;
+      animation: latir 1s infinite;
+    }
+
+    @keyframes latir {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.18);
+      }
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 15px 0 5px;
+      color: #d63384;
+    }
+
+    h2 {
+      font-size: 25px;
+      margin-bottom: 20px;
+      color: #8a174f;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ff4d88, #c9184a);
+      color: white;
+      font-size: 17px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(201, 24, 74, 0.35);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .letter {
+      margin-top: 25px;
+      background: #fff0f6;
+      border: 2px dashed #ff8fab;
+      border-radius: 20px;
+      padding: 25px;
+      display: none;
+      text-align: left;
+      color: #5c1238;
+      animation: abrir 1s ease;
+    }
+
+    @keyframes abrir {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .letter h3 {
+      text-align: center;
+      color: #c9184a;
+      margin-bottom: 15px;
+      font-size: 26px;
+    }
+
+    .contador {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #c9184a;
+    }
+
+    .heart {
+      position: fixed;
+      top: -20px;
+      color: #fff;
+      font-size: 24px;
+      animation: caer linear forwards;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes caer {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .final {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #d63384;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 34px;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .card {
+        padding: 30px 20px;
+      }
+    }
+
+    .foto{
+
+width:220px;
+height:220px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:6px solid white;
+
+margin:20px auto;
+
+display:block;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+transition:.4s;
+
+animation:flotar 4s ease-in-out infinite;
+
+}
+
+.foto:hover{
+
+transform:scale(1.05);
+
+}
+
+@keyframes flotar{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="card">
+      <div class="big-heart">❤️</div>
+
+      <img src="img/nosotros.jpeg" class="foto" alt="Nosotros">
+
+      <h1>Feliz 2 años y 8 meses</h1>
+      <h2>Juntos, mi amor</h2>
+
+      <p>
+        Hoy celebramos otro mes más de nuestra historia,
+        de todo lo que hemos vivido, aprendido y construido juntos.
+      </p>
+
+      <p>
+        Gracias por cada momento, cada sonrisa, cada abrazo
+        y por hacer que mi vida sea más bonita desde que llegaste.
+      </p>
+
+      <div class="contador" id="contador"></div>
+
+      <button onclick="abrirCarta()">Abrí mi carta ❤️</button>
+
+      <div class="letter" id="carta">
+        <h3>Para vos, mi amor 💌</h3>
+
+        <p>
+          Mi amor, feliz 2 años y 8 meses juntos.
+          No sabés lo feliz que me hace tenerte en mi vida.
+        </p>
+
+        <p>
+          Gracias por tu amor, por tu paciencia, por cada risa,
+          por cada momento bonito y hasta por los momentos difíciles,
+          porque todos forman parte de nuestra historia.
+        </p>
+
+        <p>
+          Sos mi beba preciosa, mi lugar seguro y lo mas hermoso que me ha pasado.
+        </p>
+
+        <p>
+          Quiero toda mi vida con vos, seguir creciendo juntos
+          y seguir construyendo esta historia tan especial que hemos
+          hecho.
+        </p>
+
+        <div class="final">
+          Te amo con todo mi corazon ❤️<br>
+          Y esto apenas comienza, mi Sol hermosa...
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function abrirCarta() {
+      const carta = document.getElementById("carta");
+      carta.style.display = "block";
+    }
+
+    function crearCorazon() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+
+      const corazones = ["❤️", "💖", "💕", "💘", "💗"];
+      heart.innerHTML = corazones[Math.floor(Math.random() * corazones.length)];
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+      heart.style.fontSize = Math.random() * 20 + 18 + "px";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }
+
+    setInterval(crearCorazon, 300);
+
+    function actualizarContador() {
+      const inicio = new Date("2023-10-26T00:23:00"); 
+      const ahora = new Date();
+
+      const diferencia = ahora - inicio;
+
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+      const segundos = Math.floor((diferencia / 1000) % 60);
+
+      document.getElementById("contador").innerHTML =
+        `Llevamos juntos aproximadamente ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos ❤️`;
+    }
+
+    setInterval(actualizarContador, 1000);
+    actualizarContador();
+  </script>
+
+</body>
+</html>
